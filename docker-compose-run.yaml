@@ -81,7 +81,7 @@ services:
     networks:
       - board-network
 
-  service-board-fastapi:
+  fastapi-service:
     image: exodusean/fastapi:board
     depends_on:
       - service-board-mysql
@@ -89,8 +89,8 @@ services:
     restart: always
     environment:
       DB_HOST: "mysql-primary-container"
-      DB_USER: "dev"
-      DB_PASSWORD: "dev1234!"
+      DB_USER: "ian"
+      DB_PASSWORD: "ian1234!"
       DB_NAME: "iandb"
     networks:
       - board-network
