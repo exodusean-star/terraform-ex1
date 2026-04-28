@@ -98,7 +98,7 @@ services:
   service-board-nginx:
     image: exodusean/nginx:board
     depends_on:
-      - service-board-fastapi
+      - fastapi-service
     container_name: board-nginx-container
     restart: always
     ports:
