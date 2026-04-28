@@ -81,7 +81,7 @@ services:
     networks:
       - board-network
 
-  fastapi-service:
+  service-board-fastapi:
     image: exodusean/fastapi:board
     depends_on:
       - service-board-mysql
@@ -98,7 +98,7 @@ services:
   service-board-nginx:
     image: exodusean/nginx:board
     depends_on:
-      - fastapi-service
+      - service-board-fastapi
     container_name: board-nginx-container
     restart: always
     ports:
